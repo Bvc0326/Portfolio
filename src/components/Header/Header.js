@@ -9,11 +9,11 @@ function Header(props) {
     const { history } = props;
 
     function handleContactClick() {
-        history.push('/contact')
+        history.push('/Portfolio/contact')
     }
 
     function handleHomeClick() {
-        history.push('/')
+        history.push('/Portfolio/')
     }
 
     return (
