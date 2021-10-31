@@ -1,5 +1,6 @@
 import React from "react";
 import { TextField, Grid, Button } from "@material-ui/core";
+import Typography from '../common/Typography';
 import { Formik } from 'formik';
 import axios from 'axios';
 import{ init } from 'emailjs-com';
@@ -26,83 +27,87 @@ function Contact() {
     };
 
     return (
-        <Formik
-            initialValues={{
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            }}
-            validationSchema={schema}
-            onSubmit={values => handleSubmit(values)}
-        >
-            {({dirty, handleChange, values, errors, handleSubmit }) => {
-                return (
-                    <form onSubmit={handleSubmit}>
-                        <Grid container direction="column" spacing={3}>
-                            <Grid item>
-                                <TextField 
-                                    label="Name" 
-                                    variant="outlined" 
-                                    fullWidth 
-                                    onChange={handleChange} 
-                                    id="name"
-                                    value={values.name}
-                                    helperText={errors.name}
-                                    error={Boolean(errors.name)}
-                                />
+        <>
+            <Typography variant="h1">CONTACT</Typography>
+            <Typography variant="h2">Have a question?</Typography>
+            <Formik
+                initialValues={{
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                }}
+                validationSchema={schema}
+                onSubmit={values => handleSubmit(values)}
+            >
+                {({dirty, handleChange, values, errors, handleSubmit }) => {
+                    return (
+                        <form onSubmit={handleSubmit}>
+                            <Grid container direction="column" spacing={3}>
+                                <Grid item>
+                                    <TextField 
+                                        label="Name" 
+                                        variant="outlined" 
+                                        fullWidth 
+                                        onChange={handleChange} 
+                                        id="name"
+                                        value={values.name}
+                                        helperText={errors.name}
+                                        error={Boolean(errors.name)}
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <TextField
+                                        label="Email" 
+                                        variant="outlined" 
+                                        fullWidth 
+                                        onChange={handleChange} 
+                                        id="email"
+                                        value={values.email}
+                                        helperText={errors.email}
+                                        error={Boolean(errors.email)}
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <TextField
+                                        label="Subject" 
+                                        variant="outlined" 
+                                        fullWidth 
+                                        onChange={handleChange} 
+                                        id="subject"
+                                        value={values.subject}
+                                        helperText={errors.subject}
+                                        error={Boolean(errors.subject)}
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <TextField
+                                        label="Message" 
+                                        variant="outlined" 
+                                        fullWidth 
+                                        onChange={handleChange} 
+                                        id="message"
+                                        value={values.message}
+                                        helperText={errors.message}
+                                        error={Boolean(errors.message)}
+                                    />
+                                </Grid>
+                                <Grid item>
+                                    <Button 
+                                        variant="contained" 
+                                        color="primary" 
+                                        type="submit"
+                                    >
+                                        Submit
+                                    </Button>
+                                </Grid>
+                                <ScrollToError />
                             </Grid>
-                            <Grid item>
-                                <TextField
-                                    label="Email" 
-                                    variant="outlined" 
-                                    fullWidth 
-                                    onChange={handleChange} 
-                                    id="email"
-                                    value={values.email}
-                                    helperText={errors.email}
-                                    error={Boolean(errors.email)}
-                                />
-                            </Grid>
-                            <Grid item>
-                                <TextField
-                                    label="Subject" 
-                                    variant="outlined" 
-                                    fullWidth 
-                                    onChange={handleChange} 
-                                    id="subject"
-                                    value={values.subject}
-                                    helperText={errors.subject}
-                                    error={Boolean(errors.subject)}
-                                />
-                            </Grid>
-                            <Grid item>
-                                <TextField
-                                    label="Message" 
-                                    variant="outlined" 
-                                    fullWidth 
-                                    onChange={handleChange} 
-                                    id="message"
-                                    value={values.message}
-                                    helperText={errors.message}
-                                    error={Boolean(errors.message)}
-                                />
-                            </Grid>
-                            <Grid item>
-                                <Button 
-                                    variant="contained" 
-                                    color="primary" 
-                                    type="submit"
-                                >
-                                    Submit
-                                </Button>
-                            </Grid>
-                            <ScrollToError />
-                        </Grid>
-                    </form>
-                ) 
-            }}
-        </Formik>
+                        </form>
+                    ) 
+                }}
+            </Formik>
+        </>
     )
 }
 

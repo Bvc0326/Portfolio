@@ -11,15 +11,16 @@ function Typography(props) {
             fontFamily: ['Overpass', 'sans-serif'].join(','),
         },
         h1: {
-            fontSize: '3em',
+            fontSize: '2em',
             marginBottom: '1em'
         },
         h2: {
             fontSize: 18,
+            marginBottom: '1em'
         },
         h3: {
             fontSize: '1.65em',
-            marginBottom: '2em'
+            marginBottom: '1em'
         },
         h4: {
             fontSize: '1.25em',
