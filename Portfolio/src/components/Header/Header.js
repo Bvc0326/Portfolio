@@ -12,6 +12,10 @@ function Header(props) {
         history.push('/contact')
     }
 
+    function handleHomeClick() {
+        history.push('/')
+    }
+
     return (
         <div style={{
             height: '100px',
@@ -19,7 +23,7 @@ function Header(props) {
         }}>
 
             <Breadcrumbs>
-                <Link>HOME</Link>
+                <Link onClick={handleHomeClick}>HOME</Link>
                 <Link>ABOUT</Link>
                 <Link onClick={handleContactClick}>CONTACT</Link>
             </Breadcrumbs>
