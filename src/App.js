@@ -12,16 +12,16 @@ function App() {
 			<Router>
 				<Header />
 				<Switch>
-				<Route 
-					component={Home}
-					exact
-					path="/"
-				/>
-				<Route 
-					component={Contact}
-					exact
-					path="/contact"
-				/>
+					<Route 
+						component={Home}
+						exact
+						path="/Portfolio/"
+					/>
+					<Route 
+						component={Contact}
+						exact
+						path="/Portfolio/contact"
+					/>
 				</Switch>
 			</Router>
 		</div>
