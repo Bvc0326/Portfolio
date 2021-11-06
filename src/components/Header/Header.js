@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import { Tabs, Tab, Link, AppBar } from '@material-ui/core'
-import useStyles from "./styles";
+import React from "react";
+import { Tabs, makeStyles } from '@material-ui/core'
+import styles from "./styles";
 import { withRouter } from 'react-router-dom';
+import Tab from '../common/Tab'
+
+const useTabsStyles = makeStyles(styles.generalStyles);
 
 function Header(props) {
-
-    const styles = useStyles();
+    const tabsStyles = useTabsStyles();
     const { history } = props;
 
     const keys = window.location.pathname.split('/');
@@ -49,7 +51,15 @@ function Header(props) {
             margin: '20px 0'        
         }}>
 
-            <Tabs onChange={handleTabChange} value={currentTab}>
+            <Tabs 
+                onChange={handleTabChange} 
+                value={currentTab} 
+                className={tabsStyles.root} 
+                textColor="primary"   
+                variant="scrollable"
+                scrollButtons="auto"
+                
+            >
                 <Tab label="Home" />
                 <Tab label="About" />
                 <Tab label="My Skills" />
