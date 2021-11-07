@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
+
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import About from './components/About/About';
 import MySkills from './components/MySkills/MySkills';
+import Work from './components/Work/Work';
+import Contact from './components/Contact/Contact';
 
 function App() {
   	return (
@@ -27,6 +29,11 @@ function App() {
 						component={MySkills}
 						exact
 						path="/Portfolio/MySkills"
+					/>
+					<Route 
+						component={Work}
+						exact
+						path="/Portfolio/Work"
 					/>
 					<Route 
 						component={Contact}

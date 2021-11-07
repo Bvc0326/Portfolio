@@ -19,12 +19,13 @@ function Typography(props) {
             marginBottom: '1em'
         },
         h3: {
-            fontSize: '1.65em',
-            marginBottom: '1em'
-        },
-        h4: {
             fontSize: '17px',
             marginBottom: '1.5em',
+            fontWeight: 400,
+            lineHeight: 1.8
+        },
+        h4: {
+            fontSize: '15px',
             fontWeight: 400,
             lineHeight: 1.8
         },

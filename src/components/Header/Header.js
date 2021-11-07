@@ -24,8 +24,11 @@ function Header(props) {
         case 'MySkills': 
             currentTab = 2;
             break;
-        case 'Contact': 
+        case 'Work': 
             currentTab = 3;
+            break;
+        case 'Contact': 
+            currentTab = 4;
             break;
         default: 
             currentTab = 0;
@@ -40,6 +43,8 @@ function Header(props) {
         } else if (value === 2) {
             history.push('/Portfolio/MySkills')
         } else if (value === 3) {
+            history.push('/Portfolio/Work')
+        } else if (value === 4) {
             history.push('/Portfolio/Contact')
         }
 
@@ -63,6 +68,7 @@ function Header(props) {
                 <Tab label="Home" />
                 <Tab label="About" />
                 <Tab label="My Skills" />
+                <Tab label="Work" />
                 <Tab label="Contact" />
             </Tabs>
         </div>
