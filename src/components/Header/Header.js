@@ -58,7 +58,7 @@ function Header(props) {
                 textColor="primary"   
                 variant="scrollable"
                 scrollButtons="auto"
-                
+                indicatorColor="primary"
             >
                 <Tab label="Home" />
                 <Tab label="About" />
