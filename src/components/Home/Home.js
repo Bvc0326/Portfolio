@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid } from '@material-ui/core';
 import Section from "../common/Section";
 import Typography from '../common/Typography';
@@ -6,6 +6,10 @@ import ContactMe from "../common/ContactMe";
 import Testimonals from '../Testimonals/Testimonals';
 
 function Home() {
+
+    useEffect(() => {
+        document.title = "Home"
+    }, []);
 
     return (
         <>
@@ -27,7 +31,6 @@ function Home() {
                         </Typography>
                     </Grid>
                 </Grid>
-          
             </Section>
             <ContactMe />
             <Section>

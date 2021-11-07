@@ -1,10 +1,13 @@
-import React from "react";
-import { Link } from "@material-ui/core";
+import React, { useEffect } from "react";
 import Typography from '../common/Typography';
 import Section from "../common/Section";
 import ContactMe from "../common/ContactMe";
 
 function MySkills() {
+
+    useEffect(() => {
+        document.title = "My Skills";
+    }, []);
 
     return (
         <>
