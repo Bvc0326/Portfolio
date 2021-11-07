@@ -3,6 +3,7 @@ import { Grid } from '@material-ui/core';
 import Section from "../common/Section";
 import Typography from '../common/Typography';
 import ContactMe from "../common/ContactMe";
+import Testimonals from '../Testimonals/Testimonals';
 
 function Home() {
 
@@ -29,6 +30,7 @@ function Home() {
           
             </Section>
             <ContactMe />
+            <Testimonals />
         </>
     )
 }
