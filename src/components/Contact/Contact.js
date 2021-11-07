@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { TextField, Grid, Button } from "@material-ui/core";
 import Typography from '../common/Typography';
 import { Formik } from 'formik';
@@ -11,6 +11,10 @@ import ScrollToError from './ScrollToError'
 init("user_Per382gYay4hoP0ZJlGuQ");
 
 function Contact() {
+
+    useEffect(() => {
+        document.title = "Contact";
+    }, []);
 
     function handleSubmit(values) {
         const data = {

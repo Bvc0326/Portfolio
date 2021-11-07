@@ -1,5 +1,5 @@
-import React from "react";
-import { Accordion,AccordionSummary, AccordionDetails, Grid} from "@material-ui/core";
+import React, { useEffect } from "react";
+import { Accordion,AccordionSummary, AccordionDetails } from "@material-ui/core";
 import { ExpandMore } from '@material-ui/icons'
 
 import Typography from '../common/Typography';
@@ -9,6 +9,10 @@ import ClientDetails from "./ClientDetails";
 import clients from "./clients";
 
 function Work() {
+
+    useEffect(() => {
+        document.title = "Work"
+    }, []);
 
     return (
         <>

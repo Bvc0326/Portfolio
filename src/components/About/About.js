@@ -1,16 +1,32 @@
-import React from "react";
-import { Link } from "@material-ui/core";
+import React, { useEffect } from "react";
+import { Link, Grid } from "@material-ui/core";
 import Typography from '../common/Typography';
 import Section from "../common/Section";
 import ContactMe from "../common/ContactMe";
 
+import myImage from '../Images/vinay.jpg';
+
 function About() {
+
+    useEffect(() => {
+        document.title = "About"
+    }, []);
 
     return (
         <>
             <Section>                
                 <Typography variant="h1">ABOUT</Typography>
             </Section>
+
+            <Grid 
+                container 
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Grid item>
+                    <img src={myImage} alt="" />
+                </Grid>
+            </Grid>
             <Section>
                 <Typography variant="h3">
                     I am a Front End Devloper located in Chicago, IL. Currenlty, working at company <Link href="https://cardinal-ip.com/" target="_blank">Cadrinal Intellectual Property</Link> and it has been more than two years.
