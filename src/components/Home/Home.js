@@ -30,7 +30,9 @@ function Home() {
           
             </Section>
             <ContactMe />
-            <Testimonals />
+            <Section>
+                <Testimonals />
+            </Section>
         </>
     )
 }
