@@ -68,6 +68,7 @@ function Testimonals() {
                             justifyContent="center"
                             alignItems="center"
                             spacing={3}
+                            key={i}
                         >
                             <Grid item>
                                 <img src={item.image} alt=""/>
